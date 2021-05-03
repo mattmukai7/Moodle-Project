@@ -20,7 +20,7 @@ echo '<h1>'.$p->name.'</h1><br>';
 echo $p->content."<br><br>";
 
 echo '<form method="post" action="../print/print_course.php'.$id.'">';
-echo '<button type="submit">Print '.$COURSE->shortname.' Objectives</button>';
+echo '<button type="submit" class="btn btn-primary">Print '.$COURSE->shortname.' Objectives</button>';
 echo '</form>';
 
 echo $OUTPUT->footer();

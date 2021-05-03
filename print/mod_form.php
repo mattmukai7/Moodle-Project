@@ -16,7 +16,12 @@ class mod_print_mod_form extends moodleform_mod {
 	$mform->addElement('header', 'general', get_string('general', 'form'));
 
 	//Name
-	$mform->addElement('static', 'warning', get_String('warning'), "Make sure to hide this module in the common module settings menu!");
+	$mform->addElement('static', 'warning', get_String('warning'), "To use this plugin, list the objectives on seperate lines with the following format:
+		{objective name}, {assignment that it refers to}, {grade percentage to check against}
+		
+		Include a syllabus document in the Moodle Page that contains the word 'Syllabus' somewhere in the title.
+		
+		Finally, make sure to hide this module in the common module settings menu!");
         $mform->addElement('text', 'name', get_string('name'), array('size'=>'48'));
 	if (!empty($CFG->formatstringstriptags)) {
             $mform->setType('name', PARAM_TEXT);
